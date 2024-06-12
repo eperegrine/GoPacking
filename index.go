@@ -64,7 +64,8 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	fmt.Println("Listening on port 80")
 	http.HandleFunc("/pack", packHandler)
 	http.HandleFunc("/", indexHandler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
